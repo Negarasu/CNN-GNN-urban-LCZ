@@ -17,7 +17,7 @@ For the GNN, valid urban pixels are represented as graph nodes. Each node has LC
 
 The block size is defined in pixels. For 2 km data, block_size = 32 means about 64 km $\times$ 64 km blocks. For 500 m data, block_size = 32 means about 16 km $\times$ 16 km blocks (**feel free to adjust this value**). Smaller blocks are easier but closer to local interpolation. Larger blocks are stricter but may leave fewer samples.
 
-Please record for each experiment: target variable, resolution, spatial domain, input predictors, split type, block size, train/validation/test sample counts, CNN patch size, GNN k value, whether GNN edges cross split groups, and test R²/RMSE/MAE.
+Please record for each experiment: target variable, resolution, spatial domain, input predictors, split type, block size, train/validation/test sample counts, CNN patch size, GNN k value, and test R square/RMSE/MAE (or whatever metrics we used).
 
 Recommended order: keep the current no-coordinate random split as a baseline (Negar, you already have it), then run the no-coordinate block split as the main robustness test (in this folder). If we want to claim transfer across cities, we need to also add a city-holdout or megapolitan-area-holdout test.
 
